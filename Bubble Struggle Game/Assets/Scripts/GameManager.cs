@@ -25,5 +25,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _scoreText.text = PlayerController.score.ToString();
+
+     
     }
 }
