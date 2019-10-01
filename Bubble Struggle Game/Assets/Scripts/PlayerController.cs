@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rbd;
     private bool _isGrounded;
-    public static bool _canFire;
+
+    public static bool canFire;
+    public static int score;
 
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
@@ -18,14 +20,15 @@ public class PlayerController : MonoBehaviour
     {
         _rbd = GetComponent<Rigidbody2D>();
         _isGrounded = false;
-        _canFire = true;
+        canFire = true;
+        score = 0;
     }
 
     void FixedUpdate()
     {
         Movement();
 
-        if (Input.GetButtonDown("Fire1") && _isGrounded && _canFire)
+        if (Input.GetButtonDown("Fire1") && _isGrounded && canFire)
         {
             Fire();
         }

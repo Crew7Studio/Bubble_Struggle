@@ -9,7 +9,7 @@ public class ChainController : MonoBehaviour
 
     void Start()
     {
-        PlayerController._canFire = false;
+        PlayerController.canFire = false;
     }
 
     void Update()
@@ -21,12 +21,13 @@ public class ChainController : MonoBehaviour
     {
         if(other.tag == "Ball")
         {
+            PlayerController.score++;
             other.GetComponent<BallController>().Split();
             Destroy(other.gameObject);
         }
 
 
-        PlayerController._canFire = true;
+        PlayerController.canFire = true;
         Destroy(gameObject);
     }
 }

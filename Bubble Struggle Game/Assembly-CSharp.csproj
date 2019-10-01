@@ -64,7 +64,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallController.cs" />
     <Compile Include="Assets\Scripts\ChainController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <None Include="Assets\Fonts\Roboto\LICENSE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/JOJU/UNITY_PROJECTS/2D/Bubble_Struggle/Bubble Struggle Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
