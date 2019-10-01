@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
+    public static int ballCount;
+
     private Rigidbody2D _rbd;
 
     [SerializeField] private GameObject _nextBallPrefab;
@@ -11,10 +13,12 @@ public class BallController : MonoBehaviour
     [SerializeField] private Vector2 _newForce;
 
 
+
     void Start()
     {
         _rbd = GetComponent<Rigidbody2D>();
         _rbd.AddForce(_startForce, ForceMode2D.Impulse);
+        ballCount++;
     }
 
     public void Split()

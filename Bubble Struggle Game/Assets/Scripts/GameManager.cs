@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Text _scoreText;
     [SerializeField] private GameObject _gameOverScreen;
+    [SerializeField] private GameObject _continueScreem;
 
     private void OnEnable()
     {
@@ -20,14 +21,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        BallController.ballCount = 1;
     }
 
     void Update()
     {
         _scoreText.text = PlayerController.score.ToString();
 
-     
+        print(BallController.ballCount);
+        if (BallController.ballCount <=0)
+        {
+            _continueScreem.SetActive(true);
+            print("level won");
+        }
     }
 
     public void GameOver()

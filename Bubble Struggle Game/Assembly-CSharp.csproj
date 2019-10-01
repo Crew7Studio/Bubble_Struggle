@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallController.cs" />
     <Compile Include="Assets\Scripts\ChainController.cs" />
+    <Compile Include="Assets\Scripts\Continue.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
