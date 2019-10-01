@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 7453120753141805894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7453120753744308582}
   m_RootOrder: 0
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 7453120753744308504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.42, y: 3.63, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7453120753141805895}
   m_Father: {fileID: 0}
@@ -128,7 +128,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.14
 --- !u!50 &7453120753744308580
 Rigidbody2D:
   serializedVersion: 4
@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c76ecbcccef1c54c9d69b9b41afa5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceRange: 3
+  _forceRange: 2
   _nextBallPrefab: {fileID: 7453120753744308504, guid: 8fbd9829e5534da4a8848c0db152bc1d,
     type: 3}

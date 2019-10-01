@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c76ecbcccef1c54c9d69b9b41afa5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceRange: 3
+  _forceRange: 2
   _nextBallPrefab: {fileID: 7453120753744308504, guid: 1fa79103094db51468051c325b39a45d,
     type: 3}

@@ -14,16 +14,16 @@ public class BallController : MonoBehaviour
     {
         _rbd = GetComponent<Rigidbody2D>();
 
-        float force = Random.Range(-_forceRange, _forceRange);
-        _rbd.AddForce(transform.position * 3, ForceMode2D.Impulse);
+        float force = Random.Range(1, _forceRange);
+        _rbd.AddForce(transform.position * force, ForceMode2D.Impulse);
     }
 
     public void Split()
     {
         if (_nextBallPrefab != null)
         {
-            GameObject ball01 = Instantiate(_nextBallPrefab, transform.position, Quaternion.identity) as GameObject;
-            GameObject ball02 = Instantiate(_nextBallPrefab, transform.position, Quaternion.identity) as GameObject;
+            GameObject ball01 = Instantiate(_nextBallPrefab, _rbd.position + Vector2.right / 4f , Quaternion.identity) as GameObject;
+            GameObject ball02 = Instantiate(_nextBallPrefab, _rbd.position + Vector2.left / 4f, Quaternion.identity) as GameObject;
         }
         else
         {
