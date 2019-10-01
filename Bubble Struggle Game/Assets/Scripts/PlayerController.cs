@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.collider.tag == "Ball")
         {
-            print("Gameover");
+            GameManager.Instance.GameOver();
         }
     }
 }

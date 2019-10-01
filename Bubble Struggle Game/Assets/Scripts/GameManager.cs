@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     [SerializeField] private Text _scoreText;
+    [SerializeField] private GameObject _gameOverScreen;
 
     private void OnEnable()
     {
@@ -27,5 +28,10 @@ public class GameManager : MonoBehaviour
         _scoreText.text = PlayerController.score.ToString();
 
      
+    }
+
+    public void GameOver()
+    {
+        _gameOverScreen.SetActive(true);
     }
 }

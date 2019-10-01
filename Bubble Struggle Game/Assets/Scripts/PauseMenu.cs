@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Toggle()
+    public void Toggle()
     {
         _pauseMenu.SetActive(!_pauseMenu.activeSelf);
 
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        print("main menu");
-        //SceneManager.LoadScene(_mainMenu);
+        Toggle();
+        SceneManager.LoadScene(_mainMenu);
     }
 }
