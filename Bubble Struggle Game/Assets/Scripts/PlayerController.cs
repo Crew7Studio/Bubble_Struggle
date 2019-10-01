@@ -73,4 +73,12 @@ public class PlayerController : MonoBehaviour
         
         GameObject bullet = Instantiate(_chainPrefab, transform.position, Quaternion.identity) as GameObject;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.collider.tag == "Ball")
+        {
+            print("Gameover");
+        }
+    }
 }

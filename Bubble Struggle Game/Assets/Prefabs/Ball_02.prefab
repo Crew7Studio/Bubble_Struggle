@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c76ecbcccef1c54c9d69b9b41afa5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceRange: 2
+  _startForce: {x: 2, y: 5}
   _nextBallPrefab: {fileID: 7453120753744308504, guid: d1382c8630160d4449684bb43250043f,
     type: 3}
+  _newForce: {x: 3, y: 7}
