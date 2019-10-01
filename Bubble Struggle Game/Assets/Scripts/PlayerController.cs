@@ -84,5 +84,9 @@ public class PlayerController : MonoBehaviour
         {
          //   GameManager.Instance.GameOver();
         }
+        if(other.collider.tag == "SlowBall")
+        {
+
+        }
     }
 }
