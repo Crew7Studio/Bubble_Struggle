@@ -173,4 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 8
-  _jumpForce: 6
+  _jumpForce: 7
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _chainPrefab: {fileID: 0}

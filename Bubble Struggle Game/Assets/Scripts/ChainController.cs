@@ -9,7 +9,7 @@ public class ChainController : MonoBehaviour
 
     void Start()
     {
-        PlayerController.canFire = false;
+        //PlayerController.canFire = false;
     }
 
     void Update()
@@ -19,7 +19,8 @@ public class ChainController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Ball")
+        PlayerController.canFire = true;
+        if (other.tag == "Ball")
         {
             PlayerController.score++;
             BallController.ballCount--;
@@ -27,8 +28,6 @@ public class ChainController : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-
-        PlayerController.canFire = true;
         Destroy(gameObject);
     }
 }

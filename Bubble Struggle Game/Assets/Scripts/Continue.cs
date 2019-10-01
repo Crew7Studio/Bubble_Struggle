@@ -9,6 +9,7 @@ public class Continue : MonoBehaviour
 
     [SerializeField] private Text _score;
     [SerializeField] private string _mainMenu = "Main_Menu";
+    [SerializeField] private string _nextLevel;
 
 
     private void Start()
@@ -29,9 +30,9 @@ public class Continue : MonoBehaviour
 
     }
 
-    public void Retry()
+    public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(_nextLevel);
     }
 
     public void MainMenu()

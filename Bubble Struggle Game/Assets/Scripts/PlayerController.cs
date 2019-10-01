@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && _isGrounded && canFire)
         {
             Fire();
+            canFire = false;
         }
 
         
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.collider.tag == "Ball")
         {
-            GameManager.Instance.GameOver();
+         //   GameManager.Instance.GameOver();
         }
     }
 }
