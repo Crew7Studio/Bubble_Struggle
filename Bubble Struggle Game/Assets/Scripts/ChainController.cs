@@ -22,6 +22,7 @@ public class ChainController : MonoBehaviour
         if (other.tag == "Ball")
         {
             PlayerController.score++;
+            AudioManager.Instance.EnemyHit();
             other.GetComponent<BallController>().Split();
             Destroy(other.gameObject);
         }

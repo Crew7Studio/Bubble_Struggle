@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && _isGrounded && canFire)
         {
             Fire();
+            AudioManager.Instance.Shoot();
             if (rapidFire)
             {
                 canFire = true;
@@ -93,17 +94,19 @@ public class PlayerController : MonoBehaviour
     {
         if(other.collider.tag == "Ball")
         {
-            Damage();   
-
+            Damage();
+            AudioManager.Instance.PlayerHit();
 
         }else if(other.collider.tag == "RapidFire")
         {
+            AudioManager.Instance.PowerUp();
             other.collider.GetComponent<RapidFire>().StartRapidFire();
             other.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
             other.collider.enabled = false;
         }else if(other.collider.tag == "GiveLife")
         {
             _lifeCount++;
+            AudioManager.Instance.PowerUp();
             Destroy(other.gameObject);
         }
        
