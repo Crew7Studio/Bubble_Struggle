@@ -9,7 +9,6 @@ public class ChainController : MonoBehaviour
 
     void Start()
     {
-        //PlayerController.canFire = false;
     }
 
     void Update()

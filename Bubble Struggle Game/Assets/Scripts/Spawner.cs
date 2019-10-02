@@ -6,7 +6,9 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _rapidFire;
     [SerializeField] private GameObject _giveLife;
-    [SerializeField] private float _spawnDelay;
+
+    public float _spawnDelay;
+
 
     private void Start()
     {
@@ -15,7 +17,11 @@ public class Spawner : MonoBehaviour
 
     private void PowerUpSpawner()
     {
-        GameObject prefab = RandomSpawn();
+        if (GameManager.Instance._continueScreen.activeSelf || GameManager.Instance._gameOverScreen.activeSelf) {
+            return;
+        }
+
+            GameObject prefab = RandomSpawn();
         if(prefab != null)
         {
             Instantiate(prefab, transform.position, Quaternion.identity);

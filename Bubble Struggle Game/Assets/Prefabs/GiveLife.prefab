@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6969126664980109793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 6969126666154383215}
   m_RootOrder: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6969126666154383213}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a865b841af587ae40bf8b3ec9dba7208, type: 2}
+  m_Material: {fileID: 6200000, guid: 82a516a84f18f594894e18ede1cdaf1d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4321daa54e9a43243a523182e6fcebbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startForce: {x: 1, y: 1}
+  _startForce: {x: 2, y: 2}
   _rapidFireInterval: 10

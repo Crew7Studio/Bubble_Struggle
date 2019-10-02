@@ -12,12 +12,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Text _scoreText;
     [SerializeField] private Text _lifeText;
-    [SerializeField] private int _initialLife = 2;
-    [SerializeField] private GameObject _gameOverScreen;
-    [SerializeField] private GameObject _continueScreen;
+    [SerializeField] private int _initialLife = 10;          // On reset i.e gameover
     [SerializeField] private GameObject _pauseMenu;
-    [SerializeField] private GameObject _spawner;
 
+    public GameObject _gameOverScreen;
+    public GameObject _continueScreen;
 
     private void OnEnable()
     {
@@ -38,35 +37,35 @@ public class GameManager : MonoBehaviour
         if (BallController.ballCount <=0)
         {
             _continueScreen.SetActive(true);
-            print("level won");
         }
 
         // If continue or game over screen is active then do show pause menu
         if(_continueScreen.activeSelf || _gameOverScreen.activeSelf)
         {
+            Time.timeScale = 1f;        // when pressing on continue/gameoverscreen wont slowdwn the time
             _pauseMenu.SetActive(false);
-            _spawner.SetActive(false);
+            GameObject.FindObjectOfType<PlayerController>().enabled = false;
         }
     }
 
     public void GameOver()
     {
         _gameOverScreen.SetActive(true);
-        ResetLife();
+      //  ResetLife();
     }
 
     // To count the number of balls currently active; So as to open the Continue UI
     private IEnumerator BallCounter()
     {
         BallController.ballCount = GameObject.FindObjectsOfType<BallController>().Length;
-        print(BallController.ballCount);
 
         yield return new WaitForSeconds(1f);
         StartCoroutine(BallCounter());
     }
 
-    private void ResetLife()
+    public void ResetLife()
     {
+        GameObject.FindObjectOfType<PlayerController>().enabled = true;
         PlayerController._lifeCount = _initialLife;
     }
 }

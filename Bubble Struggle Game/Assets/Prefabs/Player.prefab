@@ -176,5 +176,6 @@ MonoBehaviour:
   _jumpForce: 7
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  _chainPrefab: {fileID: 0}
+    m_Bits: 512
+  _chainPrefab: {fileID: 907513822971150131, guid: 26613d6289033614fb04a04167721dbb,
+    type: 3}

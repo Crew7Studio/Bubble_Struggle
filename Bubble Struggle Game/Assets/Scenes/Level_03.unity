@@ -385,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 7862277476373142876, guid: 6e5f002a96ec98742b1989736e36ab3e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.71
       objectReference: {fileID: 0}
     - target: {fileID: 7862277476373142876, guid: 6e5f002a96ec98742b1989736e36ab3e,
         type: 3}
@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 7862277476373142877, guid: 6e5f002a96ec98742b1989736e36ab3e,
         type: 3}
       propertyPath: _spawnDelay
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e5f002a96ec98742b1989736e36ab3e, type: 3}
@@ -1805,10 +1805,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 561456306}
   _lifeText: {fileID: 561456305}
-  _initialLife: 2
+  _initialLife: 5
+  _pauseMenu: {fileID: 2068277830}
   _gameOverScreen: {fileID: 1638678841}
   _continueScreen: {fileID: 942079294}
-  _pauseMenu: {fileID: 2068277830}
 --- !u!4 &985455839
 Transform:
   m_ObjectHideFlags: 0
@@ -3129,7 +3129,7 @@ PrefabInstance:
     - target: {fileID: 4812750866849021941, guid: 47f5b77001c551241addb8cbd150a154,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.09
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 4812750866849021941, guid: 47f5b77001c551241addb8cbd150a154,
         type: 3}
@@ -3209,12 +3209,12 @@ PrefabInstance:
     - target: {fileID: 4076706069127184327, guid: 88a5c646d832e4548a2f50a81b31cb27,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.04
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 4076706069127184327, guid: 88a5c646d832e4548a2f50a81b31cb27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1799998
+      value: 5.53
       objectReference: {fileID: 0}
     - target: {fileID: 4076706069127184327, guid: 88a5c646d832e4548a2f50a81b31cb27,
         type: 3}
@@ -3350,7 +3350,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _chainPrefab
       value: 
-      objectReference: {fileID: 907513822971150131, guid: f9f0ccb111636244185e2fb96158d2de,
+      objectReference: {fileID: 907513822971150131, guid: 26613d6289033614fb04a04167721dbb,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676acea3b1a050f4cb7cc862efd65f33, type: 3}
