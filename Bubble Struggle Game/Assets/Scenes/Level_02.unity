@@ -1617,6 +1617,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 942079292}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &942079294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3528511934762689558, guid: e25cf021abf71eb4a847e976cbc19a1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 942079292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &985455837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 1872374741}
   _gameOverScreen: {fileID: 1638678841}
-  _continueScreem: {fileID: 0}
+  _continueScreem: {fileID: 942079294}
 --- !u!4 &985455839
 Transform:
   m_ObjectHideFlags: 0

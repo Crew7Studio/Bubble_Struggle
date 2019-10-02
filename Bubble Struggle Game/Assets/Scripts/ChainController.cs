@@ -23,7 +23,6 @@ public class ChainController : MonoBehaviour
         if (other.tag == "Ball")
         {
             PlayerController.score++;
-            BallController.ballCount--;
             other.GetComponent<BallController>().Split();
             Destroy(other.gameObject);
         }

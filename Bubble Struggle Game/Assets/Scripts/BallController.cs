@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public static int ballCount;
+    public static int ballCount = 1;
 
     private Rigidbody2D _rbd;
 
@@ -12,13 +12,12 @@ public class BallController : MonoBehaviour
     [SerializeField] private Vector2 _startForce;
     [SerializeField] private Vector2 _newForce;
 
-
+   
 
     void Start()
     {
         _rbd = GetComponent<Rigidbody2D>();
         _rbd.AddForce(_startForce, ForceMode2D.Impulse);
-        ballCount++;
     }
 
     public void Split()
@@ -44,4 +43,6 @@ public class BallController : MonoBehaviour
         ball01.GetComponent<BallController>()._startForce = new Vector2(_newForce.x, _newForce.y);
         ball02.GetComponent<BallController>()._startForce = new Vector2(-_newForce.x, _newForce.y);
     }
+
+
 }

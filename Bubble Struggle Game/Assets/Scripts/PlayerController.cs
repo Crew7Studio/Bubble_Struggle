@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
 
     public static bool canFire;
+    public static bool rapidFire;
     public static int score;
 
     [SerializeField] private float _speed;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         _rbd = GetComponent<Rigidbody2D>();
         _isGrounded = false;
         canFire = true;
+        rapidFire = false;
         score = 0;
     }
 
@@ -31,7 +33,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && _isGrounded && canFire)
         {
             Fire();
-            canFire = false;
+            if (rapidFire)
+            {
+                canFire = true;
+            }
+            else
+            {
+                canFire = false;
+            }
         }
 
         
@@ -83,10 +92,12 @@ public class PlayerController : MonoBehaviour
         if(other.collider.tag == "Ball")
         {
          //   GameManager.Instance.GameOver();
-        }
-        if(other.collider.tag == "SlowBall")
+        }else if(other.collider.tag == "RapidFire")
         {
-
+            other.collider.GetComponent<RapidFire>().StartRapidFire();
+            other.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            other.collider.enabled = false;
         }
+       
     }
 }

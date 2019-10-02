@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SlowSpeed.cs" />
+    <Compile Include="Assets\Scripts\RapidFire.cs" />
     <None Include="Assets\Fonts\Roboto\LICENSE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/JOJU/UNITY_PROJECTS/2D/Bubble_Struggle/Bubble Struggle Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -12,26 +12,26 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Text _scoreText;
     [SerializeField] private GameObject _gameOverScreen;
-    [SerializeField] private GameObject _continueScreem;
+    [SerializeField] private GameObject _continueScreen;
 
     private void OnEnable()
     {
         if(_instance == null) { _instance = this; }
+      
+        StartCoroutine(BallCounter());
     }
 
     void Start()
     {
-        BallController.ballCount = 1;
     }
 
     void Update()
     {
         _scoreText.text = PlayerController.score.ToString();
 
-        print(BallController.ballCount);
         if (BallController.ballCount <=0)
         {
-            _continueScreem.SetActive(true);
+            _continueScreen.SetActive(true);
             print("level won");
         }
     }
@@ -39,5 +39,15 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _gameOverScreen.SetActive(true);
+    }
+
+    // To count the number of balls currently active; So as to open the Continue UI
+    private IEnumerator BallCounter()
+    {
+        BallController.ballCount = GameObject.FindObjectsOfType<BallController>().Length;
+        print(BallController.ballCount);
+
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(BallCounter());
     }
 }

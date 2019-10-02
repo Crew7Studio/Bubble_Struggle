@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Chain
   - SlowBall
+  - RapidFire
   layers:
   - Default
   - TransparentFX
