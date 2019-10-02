@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     [SerializeField] private Text _scoreText;
+    [SerializeField] private Text _lifeText;
+    [SerializeField] private int _initialLife = 2;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] private GameObject _continueScreen;
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _scoreText.text = PlayerController.score.ToString();
+        _lifeText.text ="X " + PlayerController._lifeCount;
 
         if (BallController.ballCount <=0)
         {
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _gameOverScreen.SetActive(true);
+        ResetLife();
     }
 
     // To count the number of balls currently active; So as to open the Continue UI
@@ -49,5 +53,10 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         StartCoroutine(BallCounter());
+    }
+
+    private void ResetLife()
+    {
+        PlayerController._lifeCount = _initialLife;
     }
 }

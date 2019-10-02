@@ -11,15 +11,18 @@ public class PlayerController : MonoBehaviour
     public static bool canFire;
     public static bool rapidFire;
     public static int score;
+    public static int _lifeCount = 2;
 
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private GameObject _chainPrefab;
 
+
     void Start()
     {
         _rbd = GetComponent<Rigidbody2D>();
+
         _isGrounded = false;
         canFire = true;
         rapidFire = false;
@@ -91,12 +94,27 @@ public class PlayerController : MonoBehaviour
     {
         if(other.collider.tag == "Ball")
         {
-         //   GameManager.Instance.GameOver();
+            Damage();   
+
+
         }else if(other.collider.tag == "RapidFire")
         {
             other.collider.GetComponent<RapidFire>().StartRapidFire();
             other.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
             other.collider.enabled = false;
+        }
+       
+    }
+
+    public void Damage()
+    {
+        if (_lifeCount < 1)
+            return;
+
+        _lifeCount--;
+
+        if (_lifeCount < 1) {
+            GameManager.Instance.GameOver();
         }
        
     }
