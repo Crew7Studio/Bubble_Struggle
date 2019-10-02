@@ -991,7 +991,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2fffb1130edc4dd45a04cbae825c12cb, type: 3}
+    m_Font: {fileID: 12800000, guid: 50c3ea3a0e1509c4b9350e12185d3cdb, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1252,7 +1252,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 588fa7b6e5d11ea409f85b7d22424c7a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.362
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
