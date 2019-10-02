@@ -9,8 +9,8 @@ TagManager:
   - Obstacle
   - Ground
   - Chain
-  - SlowBall
   - RapidFire
+  - GiveLife
   layers:
   - Default
   - TransparentFX
@@ -27,8 +27,8 @@ TagManager:
   - Obstacle
   - Chain
   - SlowBall
-  - 
-  - 
+  - GiveLife
+  - RapidFire
   - 
   - 
   - 

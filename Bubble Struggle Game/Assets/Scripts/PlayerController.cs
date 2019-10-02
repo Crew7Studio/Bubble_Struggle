@@ -102,6 +102,10 @@ public class PlayerController : MonoBehaviour
             other.collider.GetComponent<RapidFire>().StartRapidFire();
             other.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
             other.collider.enabled = false;
+        }else if(other.collider.tag == "GiveLife")
+        {
+            _lifeCount++;
+            Destroy(other.gameObject);
         }
        
     }
