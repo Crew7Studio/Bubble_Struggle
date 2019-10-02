@@ -266,8 +266,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7862277476373142877, guid: 6e5f002a96ec98742b1989736e36ab3e,
+        type: 3}
+      propertyPath: _spawnDelay
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e5f002a96ec98742b1989736e36ab3e, type: 3}
+--- !u!1 &139177605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7862277476373142878, guid: 6e5f002a96ec98742b1989736e36ab3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 139177604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &187899013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1355,8 @@ MonoBehaviour:
   _initialLife: 2
   _gameOverScreen: {fileID: 1638678841}
   _continueScreen: {fileID: 1726390219}
+  _pauseMenu: {fileID: 2068277830}
+  _spawner: {fileID: 139177605}
 --- !u!4 &985455839
 Transform:
   m_ObjectHideFlags: 0
@@ -3229,5 +3242,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 907513822971150131, guid: f9f0ccb111636244185e2fb96158d2de,
         type: 3}
+    - target: {fileID: 7221112056115140564, guid: 676acea3b1a050f4cb7cc862efd65f33,
+        type: 3}
+      propertyPath: lifeCount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676acea3b1a050f4cb7cc862efd65f33, type: 3}

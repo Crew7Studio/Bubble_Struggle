@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _initialLife = 2;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] private GameObject _continueScreen;
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _spawner;
+
 
     private void OnEnable()
     {
@@ -36,6 +39,13 @@ public class GameManager : MonoBehaviour
         {
             _continueScreen.SetActive(true);
             print("level won");
+        }
+
+        // If continue or game over screen is active then do show pause menu
+        if(_continueScreen.activeSelf || _gameOverScreen.activeSelf)
+        {
+            _pauseMenu.SetActive(false);
+            _spawner.SetActive(false);
         }
     }
 

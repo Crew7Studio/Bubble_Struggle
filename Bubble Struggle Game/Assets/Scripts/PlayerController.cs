@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public static bool canFire;
     public static bool rapidFire;
     public static int score;
-    public static int _lifeCount = 2;
+    public static int _lifeCount = 500;
 
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rbd = GetComponent<Rigidbody2D>();
-
         _isGrounded = false;
         canFire = true;
         rapidFire = false;
@@ -118,7 +117,8 @@ public class PlayerController : MonoBehaviour
         _lifeCount--;
 
         if (_lifeCount < 1) {
-            GameManager.Instance.GameOver();
+            // GameManager.Instance.GameOver();
+            print("Gameover");
         }
        
     }

@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4321daa54e9a43243a523182e6fcebbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startForce: {x: 3, y: 3}
+  _startForce: {x: 1, y: 1}
   _rapidFireInterval: 10
